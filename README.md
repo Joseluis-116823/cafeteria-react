@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Sprint 1 - Resumen
+- PROYECTO: Sitio web para cafetería con menú interactivo
+- ELABORADO POR: José Luis Torres Hernández
+- SPRINT: 1
+- OBJETIVO: Implementar la sección de menú con productos, funciones de selección y cálculo de pedido.
+
+### Tareas completadas:
+- Diseñar la sección de menú con estructura de categorías (HTML y CSS).
+- Agregar imágenes, descripción y precios de productos.
+- Agregar más productos por categoría (bebidas, desayunos, comidas).
+- Programar función para agregar productos al pedido (React: estado y botón).
+- Programar función para eliminar productos del pedido.
+- Calcular total del pedido en tiempo real.
+- Estilizar sección 'Tu Pedido'.
+- Eliminar barra de navegación por errores en App.js.
