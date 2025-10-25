@@ -1,10 +1,15 @@
 /* Estilos generales */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #fdf6e3;
   color: #333;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Encabezado */
@@ -13,6 +18,31 @@ header {
   color: white;
   padding: 20px;
   text-align: center;
+}
+
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #5a3e2b;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Contenido principal */
+main {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  padding-bottom: 20px; /* Espacio para evitar que el contenido toque el footer */
 }
 
 /* Menú */
@@ -26,10 +56,11 @@ header {
 .menu-item {
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 8px;
   margin: 10px;
   padding: 15px;
   width: 250px;
+  object-fit: cover; /* Mantiene proporción sin deformar */
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
   text-align: center;
 }
@@ -39,13 +70,73 @@ header {
   border-radius: 8px;
 }
 
+/* Títulos de categorías */
+h3 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-top: 30px;
+  color: #6f4e37;
+}
+
+/* Sección Tu Pedido */
+.pedido-total {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 15px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.pedido-total h3 {
+  text-align: center;
+  color: #6f4e37;
+  margin-bottom: 15px;
+}
+
+.pedido-total ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pedido-total li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pedido-total li:last-child {
+  border-bottom: none;
+}
+
+.pedido-total button {
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pedido-total button:hover {
+  background-color: #5a3e2b;
+}
+
+.pedido-total h4 {
+  text-align: right;
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #333;
+}
+
 /* Pie de página */
 footer {
   background-color: #6f4e37;
   color: white;
   text-align: center;
   padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
