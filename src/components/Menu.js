@@ -1,7 +1,7 @@
 // Menu.js
-// Componente que muestra el menú dividido en categorías y permite agregar/eliminar productos del pedido
+// Componente que muestra el menú dividido en categorías y permite agregar productos al pedido global
 
-import React, { useState } from 'react';
+import React from 'react';
 
 // Lista de productos organizada por categorías
 const productos = {
@@ -28,23 +28,7 @@ const productos = {
   ]
 };
 
-const Menu = () => {
-  const [pedido, setPedido] = useState([]);
-
-  const agregarProducto = (producto) => {
-    setPedido([...pedido, producto]);
-  };
-
-  const eliminarProducto = (index) => {
-    const nuevoPedido = [...pedido];
-    nuevoPedido.splice(index, 1);
-    setPedido(nuevoPedido);
-  };
-
-  const calcularTotal = () => {
-    return pedido.reduce((total, item) => total + item.precio, 0);
-  };
-
+const Menu = ({ onAgregarProducto }) => {
   return (
     <section>
       <h2>Menú de la Cafetería</h2>
@@ -56,30 +40,20 @@ const Menu = () => {
           <div className="menu-list">
             {items.map((item, index) => (
               <div key={index} className="menu-item">
-                <img src={item.imagen} alt={item.nombre} style={{ width: '100%', height: '180px', objectFit: 'cover', borderRadius: '8px' }} />
+                <img
+                  src={item.imagen}
+                  alt={item.nombre}
+                  style={{ width: '100%', height: '180px', objectFit: 'cover', borderRadius: '8px' }}
+                />
                 <h4>{item.nombre}</h4>
                 <p>{item.descripcion}</p>
                 <p><strong>${item.precio}</strong></p>
-                <button onClick={() => agregarProducto(item)}>Agregar al pedido</button>
+                <button onClick={() => onAgregarProducto(item)}>Agregar al pedido</button>
               </div>
             ))}
           </div>
         </div>
       ))}
-
-      {/* Sección del pedido */}
-      <div className="pedido-total">
-        <h3>Tu Pedido</h3>
-        <ul>
-          {pedido.map((item, index) => (
-            <li key={index}>
-              {item.nombre} - ${item.precio}
-              <button onClick={() => eliminarProducto(index)}>Eliminar</button>
-            </li>
-          ))}
-        </ul>
-        <h4>Total: ${calcularTotal()}</h4>
-      </div>
     </section>
   );
 };
