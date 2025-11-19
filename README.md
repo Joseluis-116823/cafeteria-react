@@ -9,6 +9,7 @@ Aplicación web para una cafetería que permite:
 - Calcular el total en tiempo real.
 - Proceder con el pedido y seleccionar método de pago.
 - Confirmar el pedido con número aleatorio.
+- Consultar la ubicación del establecimiento, horario de atención y redes sociales.
 
 ## Tecnologías utilizadas
 - **React** (Componentes funcionales y Hooks)
@@ -23,7 +24,7 @@ En el directorio del proyecto, puedes ejecutar:
 
 ### `npm start`
 Ejecuta la aplicación en modo desarrollo.\
-Abre http://localhost:3000 para verla en tu navegador.
+Abre [http://localhost:3000](http://localhost:3000) para verla en tu navegador.
 
 La página se recargará cuando hagas cambios.\
 También verás errores de lint en la consola.
@@ -39,9 +40,9 @@ Optimiza el rendimiento y minifica los archivos.
 ---
 
 ## Sprint 1 - Resumen
-- **PROYECTO:** Sitio web para cafetería con menú interactivo
-- **ELABORADO POR:** José Luis Torres Hernández
-- **SPRINT:** 1
+- **PROYECTO:** Sitio web para cafetería con menú interactivo  
+- **ELABORADO POR:** José Luis Torres Hernández  
+- **SPRINT:** 1  
 - **OBJETIVO:** Implementar la sección de menú con productos, funciones de selección y cálculo de pedido.
 
 ### Tareas completadas:
@@ -57,24 +58,49 @@ Optimiza el rendimiento y minifica los archivos.
 ---
 
 ## Sprint 2 - Resumen
-- **OBJETIVO:** Implementar flujo completo de pedido y confirmación.
-- **NUEVAS FUNCIONALIDADES:**
-  - Botón **Ver Pedido** con contador de artículos seleccionados.
-  - Vista **Pedido** con opción para eliminar productos antes de confirmar.
-  - Botón **Proceder con pedido** que lleva al formulario de pago.
-  - Formulario de pago con dos opciones:
-    - **Efectivo**
-    - **En línea** (incluye campos simulados para tarjeta bancaria).
-  - Confirmación del pedido con:
-    - Resumen de productos.
-    - Total.
-    - Método de pago.
-    - Número de pedido aleatorio.
-  - Reinicio del flujo al volver al menú.
+- **OBJETIVO:** Implementar flujo completo de pedido y confirmación.  
+
+### Nuevas funcionalidades:
+- Botón **Ver Pedido** con contador de artículos seleccionados.  
+- Vista **Pedido** con opción para eliminar productos antes de confirmar.  
+- Botón **Proceder con pedido** que lleva al formulario de pago.  
+- Formulario de pago con dos opciones:
+  - **Efectivo**
+  - **En línea** (incluye campos simulados para tarjeta bancaria).  
+- Confirmación del pedido con:
+  - Resumen de productos.  
+  - Total.  
+  - Método de pago.  
+  - Número de pedido aleatorio.  
+- Reinicio del flujo al volver al menú.
+
+---
+
+## Sprint 3 - Resumen
+- **OBJETIVO:** Implementar una sección informativa que permita al cliente conocer la ubicación, horario de atención y redes sociales del establecimiento.
+
+### Historia de Usuario #3
+> Como cliente de la cafetería quiero poder visualizar la ubicación del establecimiento y el horario de atención.
+
+### Criterios de Aceptación
+- El botón **Proceder con pedido** aparece debajo del listado de productos y el total.  
+- Al hacer clic, se muestra un formulario con opciones de pago (en línea o efectivo).  
+- Se muestra un mensaje de confirmación con el resumen del pedido.  
+
+### Tareas completadas
+- Agregar dirección con referencia a Google Maps.  
+- Crear sección de horario de atención y redes sociales.  
+- Implementar componente `InfoCafeteria.js` con mapa embebido, horarios y enlaces a redes.  
+- Integrar botón para regresar al menú principal.  
 
 ---
 
 ## Cómo ejecutar el proyecto
 1. Clona el repositorio:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/Joseluis-116823/cafeteria-react.git
+
+Autor
+
+José Luis Torres Hernández
+Desarrollo de Sistemas Web – Universidad de Guadalajara (UdG)

@@ -55,13 +55,13 @@ const FormularioPago = ({ onConfirmar }) => {
         <div style={styles.form}>
           <input
             type="text"
-            placeholder="Número de tarjeta"
+            placeholder="1234-5678-9012-3456"
             value={tarjeta.numero}
             onChange={(e) => setTarjeta({ ...tarjeta, numero: e.target.value })}
           />
           <input
             type="text"
-            placeholder="Fecha de expiración (MM/AA)"
+            placeholder="05/26"
             value={tarjeta.expiracion}
             onChange={(e) => setTarjeta({ ...tarjeta, expiracion: e.target.value })}
           />
