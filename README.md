@@ -95,6 +95,32 @@ Optimiza el rendimiento y minifica los archivos.
 
 ---
 
+## Sprint 4 - Resumen
+
+- **OBJETIVO:** Implementar un banner de promociones en la parte superior del sitio e integrar sugerencias dinámicas sin afectar el flujo principal.
+
+### Historia de Usuario #4
+
+> Como cliente quiero ver promociones activas para conocer ofertas vigentes al momento de hacer un pedido.
+
+### Criterios de aceptación
+
+- El banner debe mostrarse en la parte superior del sitio.
+- La promoción debe ser visible en todas las vistas.
+- El banner debe estar estilizado correctamente y no interferir con el flujo de compra.
+- Las sugerencias deben integrarse de forma opcional y sin afectar el funcionamiento previo.
+
+### Tareas completadas
+
+- Crear componente Promocion.jsx con contenido de promoción.
+- Crear archivo de estilos promocion.css.
+- Integrar el banner en App.js arriba del contenido principal.
+- Ajustar el flujo de vistas para mantener funcionalidad completa.
+- Corregir la navegación entre "pedido", "pago" y "confirmación".
+- Integrar la función onConfirmar correctamente para finalizar pedidos.
+- Mantener los comentarios existentes en el código para facilitar el aprendizaje.
+
+
 ## Cómo ejecutar el proyecto
 1. Clona el repositorio:
    ```bash
